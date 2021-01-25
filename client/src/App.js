@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { PrivateRoute }  from "./components/privateRoute";
 
 import Login from "./components/Login";
 import "./styles.scss";
 
 function App() {
+  const logout = () => {
+    localStorage.removeItem("token");
+  };
+
   return (
     <Router>
       <div className="App">
