@@ -25,7 +25,7 @@ import axios from 'axios';
             .then(res => {
                 console.log(res)
                 localStorage.setItem("token", res.data.payload);
-                this.props.history.push("/protected");
+                this.props.history.push("/BubblePage");
             })
             .catch(err => console.log(err));
     };
